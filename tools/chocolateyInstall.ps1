@@ -1,5 +1,5 @@
 $package = 'Leiningen'
-$version = '2.7.1.2'
+$version = '2.7.1'
 
 try {
   $url = "https://github.com/technomancy/leiningen/raw/$version/bin/lein.bat"
