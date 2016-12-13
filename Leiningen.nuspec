@@ -3,7 +3,7 @@
   <metadata>
     <id>Lein</id>
     <title>Leiningen - Clojure Project Automation</title>
-    <version>2.7.1</version>
+    <version>2.7.1.2</version>
     <authors>Phil Hagelberg, Alex Osborne, Dan Larkin, and contributors</authors>
     <owners>The Leiningen maintainers</owners>
     <summary>Leiningen is for automating Clojure projects without setting your hair on fire.</summary>
@@ -23,14 +23,24 @@ It offers various project-related tasks and can:
 * run custom automation tasks written in Clojure (leiningen plug-ins)
 
 If you come from the Java world, Leiningen could be thought of as "Maven meets Ant without the pain". For Ruby and Python folks, Leiningen combines RubyGems/Bundler/Rake and pip/Fabric in a single tool.</description>
-    <projectUrl>https://github.com/technomancy/leiningen</projectUrl>
     <tags>java clojure lein leiningen REPL clojars package manager</tags>
+    <projectUrl>https://github.com/technomancy/leiningen</projectUrl>
+    <docsUrl>https://github.com/technomancy/leiningen/tree/2.7.1/doc</docsUrl>
+    <bugTrackerUrl>https://github.com/technomancy/leiningen/issues</bugTrackerUrl>
+    <packageSourceUrl>https://github.com/leiningen/leiningen-chocolatey</packageSourceUrl>
     <licenseUrl>https://github.com/technomancy/leiningen#license</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <iconUrl>https://github.com/leiningen/leiningen-chocolatey/raw/master/Leiningen/clojure_logo.png</iconUrl>
-    <releaseNotes></releaseNotes>
+    <iconUrl>https://github.com/leiningen/leiningen-chocolatey/raw/master/clojure_logo.png</iconUrl>
+    <releaseNotes>
+## 2.7.1.2
+  * updated nuspec according to chocolatey guidelines
+## 2.7.1
+  * Took over maintenance
+  * Bumped version to Leiningen 2.7.1
+  * removed `curl` dependency
+    </releaseNotes>
     <dependencies>
-      <dependency id="jdk7" />
+      <dependency id="jdk7" version="7.0.45" />
     </dependencies>
   </metadata>
   <files>
