@@ -3,7 +3,7 @@
   <metadata>
     <id>Lein</id>
     <title>Leiningen - Clojure Project Automation</title>
-    <version>2.7.1</version>
+    <version>2.7.1.20170913</version>
     <authors>Phil Hagelberg, Alex Osborne, Dan Larkin, and contributors</authors>
     <owners>The Leiningen maintainers</owners>
     <summary>Leiningen is for automating Clojure projects without setting your hair on fire.</summary>
@@ -31,11 +31,8 @@ If you come from the Java world, Leiningen could be thought of as "Maven meets A
     <licenseUrl>https://github.com/technomancy/leiningen#license</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <iconUrl>https://github.com/leiningen/leiningen-chocolatey/raw/master/clojure_logo.png</iconUrl>
-    <releaseNotes>## 2.7.1
-  * Took over maintenance
-  * Bumped version to Leiningen 2.7.1
-  * removed `curl` dependency
-  * updated nuspec according to chocolatey guidelines
+    <releaseNotes>## 2.7.1.20170913
+  * updated Github source url
     </releaseNotes>
     <dependencies>
       <dependency id="jdk7" version="7.0.45" />
