@@ -31,15 +31,7 @@ If you come from the Java world, Leiningen could be thought of as "Maven meets A
     <licenseUrl>https://github.com/technomancy/leiningen#license</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <iconUrl>https://github.com/leiningen/leiningen-chocolatey/raw/master/clojure_logo.png</iconUrl>
-    <releaseNotes>
-## 2.8.1
-  * Included lein.bat instead of of downloading from Github
-## 2.7.1.20170914
-  * Added SHA256 checksum because of download problems
-  * Bumped jdk dependency to jdk8 because of issues with the chocolatey jdk7 package
-## 2.7.1.20170913
-  * updated Github source url
-    </releaseNotes>
+    <releaseNotes>https://github.com/technomancy/leiningen/blob/2.8.1/NEWS.md</releaseNotes>
     <dependencies>
       <dependency id="jdk8" version="8.0.144" />
     </dependencies>
