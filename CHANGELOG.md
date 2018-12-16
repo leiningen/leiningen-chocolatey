@@ -2,6 +2,10 @@
 
 For changes in Leiningen proper, please see https://github.com/technomancy/leiningen/blob/master/NEWS.md
 
+  * 2.8.3
+    * No changes in packaging.
+  * 2.8.2
+    * Not released due to problems in leiningen proper.
   * 2.8.1
     * Included lein.bat instead of of downloading from Github
   * 2.7.1.20170914

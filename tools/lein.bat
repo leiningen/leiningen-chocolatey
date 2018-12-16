@@ -2,7 +2,7 @@
 
 setLocal EnableExtensions EnableDelayedExpansion
 
-set LEIN_VERSION=2.8.1
+set LEIN_VERSION=2.8.3
 
 if "%LEIN_VERSION:~-9%" == "-SNAPSHOT" (
     set SNAPSHOT=YES
@@ -154,7 +154,8 @@ if "x%HTTP_CLIENT%" == "x" goto TRY_POWERSHELL
 call powershell -? >nul 2>&1
 if NOT ERRORLEVEL 0 goto TRY_WGET
     set LAST_HTTP_CLIENT=powershell
-    powershell -Command "& {param($a,$f) $client = New-Object System.Net.WebClient;  $client.Proxy.Credentials =[System.Net.CredentialCache]::DefaultNetworkCredentials; $client.DownloadFile($a, $f)}" ""%2"" ""%1""
+    rem By default: Win7 = PS2, Win 8.0 = PS3 (maybe?), Win 8.1 = PS4, Win10 = PS5
+    powershell -Command "& {param($a,$f) if (($PSVersionTable.PSVersion | Select-Object -ExpandProperty Major) -lt 4) { exit 111; } else { $client = New-Object System.Net.WebClient; [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12; $client.Proxy.Credentials = [System.Net.CredentialCache]::DefaultNetworkCredentials; $client.DownloadFile($a, $f); }}" ""%2"" ""%1""
     SET RC=%ERRORLEVEL%
     goto EXITRC
 
@@ -217,14 +218,35 @@ goto EXITRC
 
 :DOWNLOAD_FAILED
 SET RC=3
+if "%ERRORLEVEL%" == "111" (
+    echo.
+    echo You seem to be using an old version of PowerShell that
+    echo can't download files via TLS 1.2.
+    echo Please upgrade your PowerShell to at least version 4.0, e.g. via
+    echo https://www.microsoft.com/en-us/download/details.aspx?id=50395
+    echo.
+    echo Alternatively you can manually download
+    echo %LEIN_JAR_URL%
+    echo and save it as
+    echo %LEIN_JAR%
+    echo.
+    echo If you have "curl" or "wget" you can try setting the HTTP_CLIENT
+    echo variable, but the TLS problem might still persist.
+    echo.
+    echo   a^) set HTTP_CLIENT=wget -O
+    echo   b^) set HTTP_CLIENT=curl -f -L -o
+    echo.
+    echo NOTE: Make sure to *not* add double quotes when setting the value
+    echo       of HTTP_CLIENT
+    goto EXITRC
+)
+SET RC=3
 del "%LEIN_JAR%.pending" >nul 2>&1
 echo.
 echo Failed to download %LEIN_JAR_URL%
 echo.
 echo It is possible that the download failed due to "powershell", 
 echo "curl" or "wget"'s inability to retrieve GitHub's security certificate.
-echo The suggestions below do not check certificates, so use this only if
-echo you understand the security implications of not doing so.
 echo.
 
 if "%LAST_HTTP_CLIENT%" == "powershell" (
@@ -233,8 +255,8 @@ if "%LAST_HTTP_CLIENT%" == "powershell" (
   echo the HTTP_CLIENT environment variable with one of the following 
   echo values:
   echo.
-  echo   a^) set HTTP_CLIENT=wget --no-check-certificate -O
-  echo   b^) set HTTP_CLIENT=curl -f -L -k -o
+  echo   a^) set HTTP_CLIENT=wget -O
+  echo   b^) set HTTP_CLIENT=curl -f -L -o
   echo.
   echo NOTE: Make sure to *not* add double quotes when setting the value
   echo       of HTTP_CLIENT
@@ -246,7 +268,7 @@ if "%LAST_HTTP_CLIENT%" == "curl" (
   echo the HTTP_CLIENT environment variable with one of the following 
   echo values:
   echo.
-  echo   a^) set HTTP_CLIENT=wget --no-check-certificate -O
+  echo   a^) set HTTP_CLIENT=wget -O
   echo.
   echo NOTE: Make sure to *not* add double quotes when setting the value
   echo       of HTTP_CLIENT
@@ -261,7 +283,7 @@ if "%LAST_HTTP_CLIENT%" == "wget" (
   echo the HTTP_CLIENT environment variable with one of the following 
   echo values:
   echo.
-  echo.   a^) set HTTP_CLIENT=curl -f -L -k -o
+  echo.   a^) set HTTP_CLIENT=curl -f -L -o
   echo.
   echo NOTE: make sure *not* to add double quotes to set the value of 
   echo       HTTP_CLIENT
