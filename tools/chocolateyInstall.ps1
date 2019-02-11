@@ -1,5 +1,5 @@
 $package = 'Leiningen'
-$version = '2.8.3'
+$version = '2.9.0'
 $toolsDir = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
 
 $batDir = Join-Path $Env:ChocolateyInstall 'bin'

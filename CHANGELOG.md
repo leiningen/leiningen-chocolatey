@@ -2,6 +2,8 @@
 
 For changes in Leiningen proper, please see https://github.com/technomancy/leiningen/blob/master/NEWS.md
 
+  * 2.9.0
+    * Changed dependency to "openjdk" (11.0+) insted of "jdk8"
   * 2.8.3
     * No changes in packaging.
   * 2.8.2
