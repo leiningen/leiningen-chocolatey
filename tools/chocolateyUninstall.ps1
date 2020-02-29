@@ -1,5 +1,5 @@
 $package = 'Leiningen'
-$version = '2.9.0'
+$version = '2.9.2'
 
 $installDir = Join-Path $Env:USERPROFILE '.lein'
 if (Test-Path $installDir)
