@@ -3,7 +3,7 @@
   <metadata>
     <id>Lein</id>
     <title>Leiningen - Clojure Project Automation</title>
-    <version>2.9.2</version>
+    <version>2.9.3</version>
     <authors>Phil Hagelberg, Alex Osborne, Dan Larkin, and contributors</authors>
     <owners>The Leiningen maintainers</owners>
     <summary>Leiningen is for automating Clojure projects without setting your hair on fire.</summary>
@@ -25,13 +25,13 @@ It offers various project-related tasks and can:
 If you come from the Java world, Leiningen could be thought of as "Maven meets Ant without the pain". For Ruby and Python folks, Leiningen combines RubyGems/Bundler/Rake and pip/Fabric in a single tool.</description>
     <tags>java clojure lein leiningen REPL clojars package manager</tags>
     <projectUrl>https://github.com/technomancy/leiningen</projectUrl>
-    <docsUrl>https://github.com/technomancy/leiningen/tree/2.9.2/doc</docsUrl>
+    <docsUrl>https://github.com/technomancy/leiningen/tree/2.9.3/doc</docsUrl>
     <bugTrackerUrl>https://github.com/technomancy/leiningen/issues</bugTrackerUrl>
     <packageSourceUrl>https://github.com/leiningen/leiningen-chocolatey</packageSourceUrl>
     <licenseUrl>https://github.com/technomancy/leiningen#license</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <iconUrl>https://github.com/leiningen/leiningen-chocolatey/raw/master/clojure_logo.png</iconUrl>
-    <releaseNotes>https://github.com/technomancy/leiningen/blob/2.9.2/NEWS.md</releaseNotes>
+    <releaseNotes>https://github.com/technomancy/leiningen/blob/2.9.3/NEWS.md</releaseNotes>
     <dependencies>
       <dependency id="openjdk" version="11.0" />
     </dependencies>

@@ -2,6 +2,8 @@
 
 For changes in Leiningen proper, please see https://github.com/technomancy/leiningen/blob/master/NEWS.md
 
+  * 2.9.3
+    * Add checksums and chocolatey-specific downloads
   * 2.9.2
     * No changes in packaging.
   * 2.9.1
