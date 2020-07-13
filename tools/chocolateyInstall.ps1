@@ -1,7 +1,7 @@
 $package = 'Leiningen'
-$version = '2.9.3'
+$version = '2.9.4'
 $checksumType = "sha256"
-$checksum = "23e1df18bc97226d570f47335a8d543e1b759ea303544ea57d5309be3dedcbbb"
+$checksum = "0e3c339480347df0445317d329accbd4a578ebbd8d91e568e661feb1b388706c"
 $url = "https://github.com/technomancy/leiningen/releases/download/${version}/leiningen-${version}-standalone.zip"
 
 $toolsDir = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
