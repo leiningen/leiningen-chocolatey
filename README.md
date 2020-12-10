@@ -6,8 +6,12 @@ Forked from https://github.com/Iristyle/ChocolateyPackages
 
 # How to release
 
-  * if it's just a version bump:
-    * bump the version string in the affected files
+  * bump the version string in the affected files:
+    * `CHANGELOG.md`
+    * `Leiningen.nuspec`
+    * `tools/chocolateyInstall.ps1`
+  * check if `tools/lein.bat` has actually changed or if it's just the version string
+  * download `leiningen-$VERS-standalone.zip` and do a `sha256sum` on it, that goes into  `tools/chocolateyInstall.ps1`
   * package
     * `choco pack`
   * test locally

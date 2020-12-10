@@ -2,6 +2,8 @@
 
 For changes in Leiningen proper, please see https://github.com/technomancy/leiningen/blob/master/NEWS.md
 
+  * 2.9.5
+    * No changes in packaging.
   * 2.9.4
     * No changes in packaging.
   * 2.9.3
