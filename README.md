@@ -15,7 +15,8 @@ Forked from https://github.com/Iristyle/ChocolateyPackages
   * package
     * `choco pack`
   * test locally
-    * `choco install lein -dv -s .`
+    * `choco install Lein*.nupkg`
+    * alternatively `choco install lein -dv -s .`
   * upload
     * `choco apikey --key APIKEY --source https://push.chocolatey.org`
     * `choco push Lein-VERSION.nupkg -s https://push.chocolatey.org/`

@@ -2,7 +2,7 @@
 
 setLocal EnableExtensions EnableDelayedExpansion
 
-set LEIN_VERSION=2.9.5
+set LEIN_VERSION=2.9.6
 
 if "%LEIN_VERSION:~-9%" == "-SNAPSHOT" (
     set SNAPSHOT=YES
@@ -426,4 +426,3 @@ rem will surround each path with double quotes before appending it to LEIN_LIBS
 exit /B %RC%
 
 :EOF
-
