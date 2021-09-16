@@ -1,8 +1,8 @@
 $package = 'Leiningen'
-$version = '2.9.6'
+$version = '2.9.7'
 $checksumType = "sha256"
-$checksum = "41c543f73eec4327dc20e60d5d820fc2a9dc772bc671610b9c385d9c4f5970b8"
-$url = "https://github.com/technomancy/leiningen/releases/download/${version}/leiningen-${version}-standalone.zip"
+$checksum = "82f01414acecddbb0ebd6d571505bb671a6fd093236bcdac2468cfe5f2eaa802"
+$url = "https://github.com/technomancy/leiningen/releases/download/${version}/leiningen-${version}-standalone.jar"
 
 $toolsDir = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
 $batDir = Join-Path $Env:ChocolateyInstall 'bin'

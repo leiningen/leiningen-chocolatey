@@ -2,6 +2,8 @@
 
 For changes in Leiningen proper, please see https://github.com/technomancy/leiningen/blob/master/NEWS.md
 
+  * 2.9.7
+    * The release file at Github is now called ".jar" and not ".zip"
   * 2.9.6
     * Fixed typo in uninstall script.
   * 2.9.5
