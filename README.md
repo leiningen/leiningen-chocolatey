@@ -11,7 +11,7 @@ Forked from https://github.com/Iristyle/ChocolateyPackages
     * `Leiningen.nuspec`
     * `tools/chocolateyInstall.ps1`
   * check if `tools/lein.bat` has actually changed or if it's just the version string
-  * download `leiningen-$VERS-standalone.zip` and do a `sha256sum` on it, that goes into  `tools/chocolateyInstall.ps1`
+  * download `leiningen-$VERS-standalone.jar` and do a `sha256sum` on it, that goes into  `tools/chocolateyInstall.ps1`
   * package
     * `choco pack`
   * test locally
