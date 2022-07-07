@@ -4,6 +4,8 @@ This is the [Leiningen](https://leiningen.org) package for [chocolatey.org](http
 
 Forked from https://github.com/Iristyle/ChocolateyPackages
 
+**Update 2022-07:** This repository is now hosted at https://codeberg.org/wink/leiningen-chocolatey
+
 # How to release
 
   * bump the version string in the affected files:
